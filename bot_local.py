@@ -27,8 +27,8 @@ def send_welcome(message):
     # TO DO: chat_id, full_name, message_text
     chat_id = message.chat.id
 
-    first_name = 'Daniel Syahputra'
-    last_name = None
+    first_name = message.from_user.first_name
+    last_name = message.from_user.last_name
     full_name = f'{first_name} {last_name}' if last_name is not None else first_name
     
     # TO DO: subtitute text with variable
